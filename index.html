@@ -1,22 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Interactive Map</title>
+  <title>Интерактивные карты по здравоохранению</title>
   <style>
-    html, body {
+    body {
+      font-family: sans-serif;
       margin: 0;
-      padding: 0;
-      height: 100%;
+      padding: 2rem;
+      background-color: #f9f9f9;
     }
-    iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .images {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .images figure {
+      text-align: center;
+      max-width: 300px;
+    }
+
+    .images img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .map-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .map-item {
+      background: white;
+      padding: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease;
+    }
+
+    .map-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .map-item a {
+      color: #1a73e8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .map-item a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <iframe src="https://gis.flexatel.xyz/viewer/a299608f-b242-4c3f-802e-0d92b1123605" allowfullscreen></iframe>
+  <h1>Интерактивные карты по здравоохранению</h1>
+
+  <section class="section images">
+    <figure>
+      <img src="image1.png" alt="Карта 1">
+      <figcaption>Карта 1 — пример</figcaption>
+    </figure>
+    <figure>
+      <img src="image2.png" alt="Карта 2">
+      <figcaption>Карта 2 — пример</figcaption>
+    </figure>
+    <figure>
+      <img src="image3.png" alt="Карта 3">
+      <figcaption>Карта 3 — пример</figcaption>
+    </figure>
+    <figure>
+      <img src="image4.png" alt="Карта 4">
+      <figcaption>Карта 4 — пример</figcaption>
+    </figure>
+  </section>
+
+  <section class="section map-list">
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/a299608f-b242-4c3f-802e-0d92b1123605" target="_blank">Размещение больниц и поликлиник (количество больниц)</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/03b40870-edbf-4ccf-9d24-1e48e01b44ed" target="_blank">Мощность амбулаторно-поликлинических организаций</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/306b150c-a441-4bbb-80b6-06d5e8ef91e8" target="_blank">Число больничных коек (Всего, тыс. коек)</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/5d585889-4397-48bc-ab02-9856a53c7bfd" target="_blank">Численность населения на одну больничную койку</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/54ded6df-53fd-4e85-8d8d-a607c0861486" target="_blank">Численность врачей всех специальностей</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/fa03f77d-e8d5-42ea-aadb-909ccd6adeb1" target="_blank">Численность среднего медперсонала</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/36d20ba3-35c5-40be-8cd8-3e1b43cb2545" target="_blank">Нагрузка на работников здравоохранения</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/6541b642-6e64-482b-a864-9d2bd61786d8" target="_blank">Заболеваемость на 1000 человек населения</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/ab6b8a43-f750-4946-9d48-91495588b230" target="_blank">Заболеваемость туберкулезом</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/9248c4e0-ae26-42a9-939b-325bd8a406e2" target="_blank">Заболеваемость по COVID-19</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/d8256050-3236-4c97-b794-c629878f2e79" target="_blank">Болезни системы кровообращения</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/86505e6a-11eb-4d17-adcb-52020a9f8bc2" target="_blank">Злокачественные новообразования</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/2469510b-65bc-4137-b7eb-2718f1f7bcaf" target="_blank">Сахарный диабет</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/f9d259e2-7ffb-4dad-964a-3bd943fa914f" target="_blank">Дизентерия</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/64557c34-87c6-4e04-8159-2556b78c2f4e" target="_blank">Болезни органов пищеварения</a>
+    </div>
+    <div class="map-item">
+      <a href="https://gis.flexatel.xyz/viewer/4f13bdef-a373-4398-af2b-bd9c69ca0cdd" target="_blank">Заболеваемость гриппом</a>
+    </div>
+  </section>
 </body>
 </html>
